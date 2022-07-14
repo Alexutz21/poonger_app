@@ -1,8 +1,27 @@
 // rafce shortcut for auto complete
-import React from 'react'
+
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+// import { googleLogin, googleLogout } from 'react-google-login';
+// import { AiOutlineLogout } from 'react-icons/ai';
+// import { BisSearch } from 'react-icons/bi';
+// import { IoMdAdd } from 'react-icons/io';
+
+import Logo from '../utils/tiktik-logo.png';
+
 const Navbar = () => {
     return (
-    <div>Navbar</div>
+        <div className='w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4'>
+            <Link href={'/'}>
+                <div className='w-[100px] md:w-[130px]'>
+                    <Image className='cursor-pointer'
+                        src={Logo} alt='Poonger'
+                    />
+                </div>
+            </ Link>
+    </div>
 )
 }
 export default Navbar
