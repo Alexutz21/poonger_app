@@ -1,6 +1,6 @@
 import '../styles/globals.css'                    // *** in terminal 'sanity start' to start project
-import type { AppProps } from 'next/app';         
-import { useState, useEffect } from 'react';
+import type { AppProps } from 'next/app';         // only in the dir where in located 
+import { useState, useEffect } from 'react';      // ---> poonger-backend
 
 import Navbar from '../components/Navbar';        // *** in terminal 'npm run dev' to start _app.tsx
 import Sidebar from '../components/Sidebar';  
