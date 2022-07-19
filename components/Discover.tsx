@@ -1,11 +1,11 @@
 import React from 'react';
+import { NextPage } from 'next';
 import Link from 'next/link';
 import { useRouter} from 'next/router';  
 
 import { topics } from '../utils/constants';
 
-const Discover = () => {
-
+const Discover: NextPage = () => {
   const rounter = useRouter();
   const { topic } = rounter.query;
 
@@ -14,9 +14,11 @@ const Discover = () => {
 
   return (
     <div className='xl:border-b-2 xl:border-gray-200 pb-6'>
-      <p className='text-gray-500 font-semibold m-3 mt-4 hidden xl:block'>Popular Topics</p>
+      <p className='text-gray-500 font-semibold m-3 mt-4 hidden xl:block'>
+        Popular Topics
+      </p>
       <div className='flex gap-3 flex-wrap'>
-        {topics.map((item) => (
+        {topics?.map((item) => (
           <Link href={`/?topic=${item.name}`} key={item.name}>
             <div className={topic === item.name ?
               activeTopicStyle : topicStyle}>
@@ -35,3 +37,4 @@ const Discover = () => {
 }
 
 export default Discover
+
